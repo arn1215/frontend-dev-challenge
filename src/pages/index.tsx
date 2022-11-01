@@ -11,8 +11,13 @@ export default function Home({ schoolsList }) {
             return (
               <div className={styles.card}>
                 
-                <span className={styles.schoolName}>{school.name}</span>
-                <span>{school.city}</span>
+                <div className={styles.cardDetails}>
+                  <div className={styles.schoolInitial}>{school.name[0]}</div>
+                  <div className={styles.textDetails}>
+                  <span className={styles.schoolName}>{school.name}</span>
+                  <span className={styles.county}>{school.county.split(" ")[0]}</span>
+                  </div>
+                </div>
 
               </div>
             )

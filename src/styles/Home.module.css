@@ -4,5 +4,17 @@
     height: 100vh;
     width: 100%;
     margin: 0;
-
+    overflow: hidden;
   }
+
+.card {
+    max-width: 414px;
+    height: 76px;
+    border-radius: 20px;
+    background-color: #282e3c;
+    
+}
+
+.schoolName {
+    color: #FFFFFF
+}

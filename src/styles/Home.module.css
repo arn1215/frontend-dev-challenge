@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
 
 .container {
     display: flex;
@@ -6,9 +7,41 @@
     height: 100vh;
     width: 100%;
     margin: 0;
-    overflow: hidden;
+    overflow: scroll;
+    overflow-x: hidden;
     align-items: center;
-  }
+    font-family: 'Poppins', sans-serif;
+}
+
+.list { 
+    margin-top: 146px;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.header {
+    color: #ffffff;
+    font-weight: 700;
+}
+
+.searchInput {
+    min-width: 414px;
+    margin-top: 10%;
+    margin-bottom: 3%;
+    background-color: #ffffff00;
+    border-style: none;
+    outline: none;
+    color: #FFFFFF;
+}
+
+.line  {
+    height: 1px;
+    border: 0;
+    width: 414px;
+    background: rgb(255, 255, 255);
+    margin-bottom: 20px;
+}
 
 .card {
     min-width: 414px;
@@ -19,17 +52,23 @@
     justify-content: space-evenly;
     align-items: center;
     margin: 2px;
-    
+    transition-duration: 300ms;
+    transition-property: background-color;
+    cursor: pointer;
+}
+
+.card:hover {
+    background-color: #475166;
+
 }
 
 .cardDetails {
     display: flex;
     align-content: center;
-    
+
 }
 
 .textDetails {
-    width: ;
     display: flex;
     flex-direction: column;
 }
@@ -42,12 +81,15 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    background-image: linear-gradient(to bottom right, #0224D9, #04002b);
+    color: #ffffff
 }
 
 .schoolName {
-    color: #FFFFFF
+    color: #FFFFFF;
+    position: sticky;
 }
 
 .county {
-    color: #FFFFFF
+    color: #FFFFFF;
 }

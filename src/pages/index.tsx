@@ -1,11 +1,22 @@
 import { useState } from 'react'
 import styles from '../styles/Home.module.css'
+import logo from "../assets/logo.svg"
 
 export default function Home({ schoolsList }) {
 
   return (
     <>
       <div className={styles.container}>
+        <img src={logo} />
+        <div className={styles.list}>
+          <h1 className={styles.header}>Pick Your School</h1>
+          <input 
+            className={styles.searchInput}
+            placeholder={"Search for your school..."}
+          />
+          <div className={styles.line}>
+          </div>
+
         {
           schoolsList.schools.map(school => {
             return (
@@ -23,6 +34,7 @@ export default function Home({ schoolsList }) {
             )
           })
         }
+        </div>
       </div>
     </>
 

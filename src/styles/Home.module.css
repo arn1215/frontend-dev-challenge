@@ -59,7 +59,7 @@
     height: 1px;
     border: 0;
     width: 414px;
-    margin-left: 5px;
+    margin-left: 15px;
     background: #9A9A9A;
     margin-bottom: 37px;
 }
@@ -82,20 +82,19 @@
     border-radius: 20px;
     background-color: #282e3c;
     display: flex;
-    justify-content: space-evenly;
     align-items: center;
-    margin: 4px;
+    margin: 8px;
     transition-duration: 300ms;
     transition-property: background-color;
     cursor: pointer;
 }
 
 .gradient {
-   background-image: linear-gradient(rgba(39, 1, 120, 0), rgba(10, 0, 30, 0.082));
-   height: 20px;
-   margin-top: 9px;
-   width: 418px;
-   border-radius: 20px;
+    background-image: linear-gradient(rgba(39, 1, 120, 0), rgba(10, 0, 30, 0.082));
+    height: 20px;
+    margin-top: 9px;
+    width: 418px;
+    border-radius: 20px;
 }
 
 .card:hover {
@@ -113,8 +112,10 @@
 }
 
 .schoolInitial {
-    height: 50px;
-    width: 50px;
+    min-height: 50px;
+    min-width: 50px;
+    max-width: 50px;
+    max-height: 50px;
     border-radius: 50%;
     background-color: #ffffff;
     display: flex;
@@ -124,6 +125,9 @@
     color: #FFFFFF;
     font-size: 32px;
     font-weight: 600;
+    margin-left: 10px;
+    margin-right: 10px;
+    align-self: center
 }
 
 .schoolName {
@@ -133,4 +137,5 @@
 
 .county {
     color: #FFFFFF;
+    font-size: 14px;
 }

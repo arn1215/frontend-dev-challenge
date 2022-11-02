@@ -1,8 +1,18 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import styles from '../styles/Home.module.css'
 import logo from "../assets/logo.svg"
 
 export default function Home({ schoolsList }) {
+  
+  const [geoLocation, setGeoLocation] = useState({})
+
+  useEffect(() => {
+    
+    navigator.geolocation.getCurrentPosition(function(position) {
+      setGeoLocation(position)
+    });
+    console.log(geoLocation)
+  }, [])
 
 
   return (
@@ -41,7 +51,7 @@ export default function Home({ schoolsList }) {
           <div className={styles.scrollBar} style={{ marginTop: '320px', overflow: 'scroll', height: '50%' }}>
 
             {
-              schoolsList.schools.map(school => {
+              schoolsList.map(school => {
                 return (
                   <div className={styles.card}>
 
@@ -49,7 +59,7 @@ export default function Home({ schoolsList }) {
                       <div className={styles.schoolInitial}>{school.name[0]}</div>
                       <div className={styles.textDetails}>
                         <span className={styles.schoolName}>{school.name}</span>
-                        <span className={styles.county}>{school.county.split(" ")[0]}</span>
+                        <span className={styles.county}>{school.county.split("County")[0]}</span>
                       </div>
                     </div>
 
@@ -70,9 +80,16 @@ export default function Home({ schoolsList }) {
 export async function getStaticProps() {
   const res = await fetch("https://api.sendbeacon.com/team/schools")
   const data = await res.json()
+
+  const alphabetizedSchools = data.schools.sort(function(a, b) {
+    const schoolA = a.name.toUpperCase();
+    const schoolB = b.name.toUpperCase();
+    return (schoolA < schoolB) ? -1 : (schoolA > schoolB) ? 1 : 0;
+  });
+
   return {
     props: {
-      schoolsList: data
+      schoolsList: alphabetizedSchools
     }
   }
 }

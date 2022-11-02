@@ -1,4 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200&family=Poppins:wght@400;600;700&display=swap');
+
+.logoText {
+    font-family: 'Inter', sans-serif;
+    color: #FFFFFF;
+    margin-left: 7px;
+    margin-top: -2px;
+}
 
 .container {
     display: flex;
@@ -7,15 +14,20 @@
     height: 100vh;
     width: 100%;
     margin: 0;
-    overflow: scroll;
-    overflow-x: hidden;
+    overflow: hidden;
     align-items: center;
     font-family: 'Poppins', sans-serif;
+    position: absolute;
 }
 
-.list { 
+.sticky {
+    position: fixed;
+    width: 414px;
+}
+
+.list {
     margin-top: 146px;
-    display:flex;
+    display: flex;
     flex-direction: column;
     align-items: center;
 }
@@ -23,11 +35,12 @@
 .header {
     color: #ffffff;
     font-weight: 700;
+    position: sticky;
 }
 
 .searchInput {
     min-width: 414px;
-    margin-top: 10%;
+    margin-top: 22px;
     margin-bottom: 3%;
     background-color: #ffffff00;
     border-style: none;
@@ -35,37 +48,56 @@
     color: #FFFFFF;
 }
 
-.line  {
+.line {
     height: 1px;
     border: 0;
     width: 414px;
-    background: rgb(255, 255, 255);
-    margin-bottom: 20px;
+    margin-left: 5px;
+    background: #9A9A9A;
+    margin-bottom: 37px;
+}
+
+.scrollBar::-webkit-scrollbar {
+    display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.scrollBar {
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
 }
 
 .card {
-    min-width: 414px;
+    max-width: 414px;
     min-height: 76px;
     border-radius: 20px;
     background-color: #282e3c;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    margin: 2px;
+    margin: 4px;
     transition-duration: 300ms;
     transition-property: background-color;
     cursor: pointer;
 }
 
-.card:hover {
-    background-color: #475166;
+.gradient {
+   background-image: linear-gradient(rgba(39, 1, 120, 0), rgba(10, 0, 30, 0.082));
+   height: 20px;
+   margin-top: 9px;
+   width: 418px;
+   border-radius: 20px;
+}
 
+.card:hover {
+    background-color: #161921;
 }
 
 .cardDetails {
     display: flex;
     align-content: center;
-
 }
 
 .textDetails {
@@ -82,7 +114,9 @@
     justify-content: center;
     align-items: center;
     background-image: linear-gradient(to bottom right, #0224D9, #04002b);
-    color: #ffffff
+    color: #FFFFFF;
+    font-size: 32px;
+    font-weight: 600;
 }
 
 .schoolName {

@@ -13,7 +13,8 @@
     "bootstrap-icons": "^1.9.1",
     "next": "13.0.0",
     "react": "18.2.0",
-    "react-dom": "18.2.0"
+    "react-dom": "18.2.0",
+    "sort-by-distance": "^2.0.0"
   },
   "devDependencies": {
     "@types/node": "18.11.7",

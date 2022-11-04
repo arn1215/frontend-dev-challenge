@@ -5,6 +5,10 @@
     align-items: center;
 }
 
+.logoContainer {
+    margin-left: -20vw;
+}
+
 .logoText {
     font-family: 'Inter', sans-serif;
     color: #FFFFFF;
@@ -18,12 +22,10 @@
     flex-direction: column;
     background-image: linear-gradient(to bottom right, #4502D9, #000000);
     height: 100vh;
-    width: 100%;
     margin: 0;
     overflow: hidden;
     align-items: center;
     font-family: 'Poppins', sans-serif;
-    position: absolute;
 }
 
 .sticky {
@@ -32,10 +34,13 @@
 }
 
 .list {
-    margin-top: 146px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-self: center;
+    min-width: 433px;
+    margin-top: 10vh;
+    
 }
 
 .header {
@@ -58,8 +63,7 @@
 .line {
     height: 1px;
     border: 0;
-    width: 414px;
-    margin-left: 15px;
+    width: 95%;
     background: #9A9A9A;
     margin-bottom: 37px;
 }
@@ -73,11 +77,14 @@
     -ms-overflow-style: none;
     /* IE and Edge */
     scrollbar-width: none;
+    margin-top: 230px;
     /* Firefox */
+    max-height: 53%;
 }
 
 .card {
     max-width: 414px;
+    min-width: 414px;
     min-height: 76px;
     border-radius: 20px;
     background-color: #282e3c;
@@ -92,8 +99,8 @@
 .gradient {
     background-image: linear-gradient(rgba(39, 1, 120, 0), rgba(10, 0, 30, 0.082));
     height: 20px;
-    margin-top: 9px;
-    width: 418px;
+    margin-top: -32px;
+    width: 430px;
     border-radius: 20px;
 }
 
@@ -139,3 +146,30 @@
     color: #FFFFFF;
     font-size: 14px;
 }
+
+
+@media screen and (max-width: 700px) { 
+    
+    .logoContainer {
+        margin-left: 20px;
+    }
+
+    .header {
+        margin-left: -120px;
+    }
+
+    .line {
+        max-width: 300px;
+        margin-left: -120px;
+    }
+    .card {
+        min-width: 300px;
+        max-width: 300px;
+    }
+
+    .gradient {
+        max-width: 300px;
+    }
+    
+}
+
